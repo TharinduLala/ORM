@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="registrationsFormAP" prefHeight="750.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationsFormController">
+    <children>
+        <Label layoutX="27.0" layoutY="14.0" text="Registrations">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblRegDetails" layoutX="53.0" layoutY="222.0" prefHeight="479.0" prefWidth="1000.0">
+            <columns>
+                <TableColumn fx:id="colRegNo" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Reg.No" />
+            <TableColumn fx:id="colStudentId" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Student Id" />
+                <TableColumn fx:id="colCourseId" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Course Id" />
+                <TableColumn fx:id="colCourseName" editable="false" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" resizable="false" text="Course Name" />
+                <TableColumn fx:id="colRegDate" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Reg. Date" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtSearch" layoutX="53.0" layoutY="165.0" prefHeight="35.0" prefWidth="400.0" AnchorPane.leftAnchor="53.0" />
+        <Label layoutX="53.0" layoutY="138.0" text="Search In Table">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

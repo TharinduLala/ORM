@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashBoardViewAp" prefHeight="750.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardViewController">
+   <children>
+      <Rectangle arcHeight="200.0" arcWidth="200.0" height="221.0" layoutX="701.0" layoutY="461.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" />
+      <Label fx:id="lblDate" alignment="CENTER" contentDisplay="CENTER" layoutX="768.0" layoutY="616.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="CENTER" contentDisplay="CENTER" layoutX="734.0" layoutY="485.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDay" alignment="CENTER" contentDisplay="CENTER" layoutX="830.0" layoutY="572.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Rectangle fill="#3498db" height="150.0" layoutX="211.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="300.0" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="211.0" AnchorPane.rightAnchor="569.0" AnchorPane.topAnchor="50.0" />
+      <Rectangle fill="#27ae60" height="150.0" layoutX="570.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="300.0" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="570.0" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="50.0" />
+      <JFXButton fx:id="btnStudentMoreInfo" buttonType="RAISED" contentDisplay="RIGHT" layoutX="211.0" layoutY="160.0" onMouseClicked="#openStudentPge" prefHeight="40.0" prefWidth="300.0" text="More info" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="211.0" AnchorPane.rightAnchor="569.0" AnchorPane.topAnchor="160.0">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/icons/arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCourseMoreInfo" buttonType="RAISED" contentDisplay="RIGHT" layoutX="570.0" layoutY="159.0" onMouseClicked="#openCoursesPage" prefHeight="40.0" prefWidth="300.0" text="More info" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="570.0" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="160.0">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/icons/arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="417.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons/student.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="774.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons/course.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblStudentCount" alignment="TOP_LEFT" layoutX="229.0" layoutY="68.0" text="500" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCoursesCount" alignment="TOP_LEFT" layoutX="585.0" layoutY="62.0" text="500" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="229.0" layoutY="132.0" text="Students" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="585.0" layoutY="132.0" text="Courses" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

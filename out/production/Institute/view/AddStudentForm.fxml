@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addStudentFormAP" prefHeight="750.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddStudentFormController">
+    <children>
+        <Label layoutX="377.0" layoutY="2.0" text="Register for New Course">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="168.0" text="Student NIC">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="230.0" text="Student Full Name">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="541.0" prefHeight="27.0" prefWidth="201.0" text="Contact number (+94)">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="293.0" text="Birthday">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="253.0" layoutY="292.0" text="Gender">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="39.0" layoutY="355.0" text="Address">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="417.0" text="City">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="479.0" text="District">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="248.0" layoutY="479.0" text="Province">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="247.0" layoutY="417.0" text="Postal Code">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Separator layoutX="467.0" layoutY="192.0" orientation="VERTICAL" prefHeight="431.0" prefWidth="0.0" AnchorPane.leftAnchor="467.0" />
+        <Label layoutX="33.0" layoutY="96.0" text="Previously attended course at Sipsewana ?">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtSearch" layoutX="670.0" layoutY="99.0" prefHeight="35.0" prefWidth="200.0" />
+        <TextField fx:id="txtName" layoutX="37.0" layoutY="257.0" prefHeight="35.0" prefWidth="400.0" />
+        <TextField fx:id="txtContactNo" layoutX="37.0" layoutY="568.0" prefHeight="35.0" prefWidth="400.0" />
+        <TextField fx:id="txtAddress" layoutX="37.0" layoutY="382.0" prefHeight="35.0" prefWidth="400.0" />
+        <TextField fx:id="txtCity" layoutX="37.0" layoutY="444.0" prefHeight="35.0" prefWidth="190.0" />
+        <TextField fx:id="txtPostalCode" layoutX="246.0" layoutY="444.0" prefHeight="35.0" prefWidth="190.0" />
+        <Pane layoutX="252.0" layoutY="325.0" prefHeight="35.0" prefWidth="190.0">
+            <children>
+            <RadioButton fx:id="radioBtnFemale" layoutX="86.0" mnemonicParsing="false" text="Female" />
+            <RadioButton fx:id="radioBtnMale" mnemonicParsing="false" text="Male" />
+            </children>
+        </Pane>
+        <DatePicker fx:id="txtBirthday" editable="false" layoutX="37.0" layoutY="320.0" prefHeight="35.0" prefWidth="200.0" />
+        <ComboBox fx:id="cmbDistricts" layoutX="37.0" layoutY="506.0" prefHeight="35.0" prefWidth="190.0" promptText="select district" visibleRowCount="5" AnchorPane.bottomAnchor="209.0" />
+        <ComboBox fx:id="cmbProvincesList" layoutX="247.0" layoutY="506.0" prefHeight="35.0" prefWidth="190.0" promptText="select province" visibleRowCount="5" />
+        <TableView fx:id="tblRegDetails" layoutX="38.0" layoutY="640.0" prefHeight="100.0" prefWidth="750.0">
+            <columns>
+                <TableColumn fx:id="colRegNo" editable="false" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" resizable="false" sortable="false" text="Reg.No" />
+                <TableColumn fx:id="colCourseId" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Course Id" />
+                <TableColumn fx:id="colCourseName" editable="false" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" resizable="false" sortable="false" text="Course Name" />
+                <TableColumn fx:id="colRegDate" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" sortable="false" text="Reg. Date" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtNic" layoutX="37.0" layoutY="195.0" prefHeight="35.0" prefWidth="400.0" />
+        <Label layoutX="671.0" layoutY="72.0" text="Student NIC">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="879.0" layoutY="98.0" onMouseClicked="#btnSearchAction" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #2c3e50;" text="Search" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnYes" buttonType="RAISED" layoutX="414.0" layoutY="94.0" onMouseClicked="#btnYesAction" prefHeight="35.0" prefWidth="50.0" style="-fx-background-color: #8e44ad;" text="Yes" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnNo" buttonType="RAISED" layoutX="510.0" layoutY="94.0" onMouseClicked="#btnNoAction" prefHeight="35.0" prefWidth="50.0" style="-fx-background-color: #f39c12;" text="No" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <ComboBox fx:id="cmbCourseName" layoutX="570.0" layoutY="225.0" prefHeight="35.0" prefWidth="400.0" promptText="select course" AnchorPane.leftAnchor="570.0" />
+        <TextField fx:id="txtCourseId" editable="false" layoutX="570.0" layoutY="287.0" prefHeight="35.0" prefWidth="400.0" AnchorPane.leftAnchor="570.0" />
+        <TextField fx:id="txtDuration" editable="false" layoutX="570.0" layoutY="350.0" prefHeight="35.0" prefWidth="400.0" AnchorPane.leftAnchor="570.0" />
+        <TextField fx:id="txtFee" editable="false" layoutX="570.0" layoutY="412.0" prefHeight="35.0" prefWidth="400.0" AnchorPane.leftAnchor="570.0" />
+        <Label layoutX="38.0" layoutY="608.0" text="Registerd Courses">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="572.0" layoutY="198.0" text="Select Course Name">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <JFXButton fx:id="btnAddCourse" buttonType="RAISED" layoutX="833.0" layoutY="486.0" onMouseClicked="#btnAddCourseAction" prefHeight="35.0" prefWidth="137.0" style="-fx-background-color: #16a085;" text="Add Course" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="887.0" layoutY="636.0" onMouseClicked="#btnSaveAction" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #2980b9;" text="Save Registration" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="887.0" layoutY="690.0" onMouseClicked="#btnCancelAction" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #e74c3c;" text="Cancel" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+      <Label layoutX="572.0" layoutY="260.0" text="Course ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="572.0" layoutY="322.0" text="Duration">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="572.0" layoutY="385.0" text="Fee(LKR)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
