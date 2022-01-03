@@ -4,19 +4,19 @@ import java.time.LocalDate;
 
 public class RegistrationsTm {
     private String regNo;
-    private String sId;
-    private String cId;
-    private String cName;
+    private String studentId;
+    private String courseId;
+    private String courseName;
     private LocalDate regDate;
 
     public RegistrationsTm() {
     }
 
-    public RegistrationsTm(String regNo, String sId, String cId, String cName, LocalDate regDate) {
+    public RegistrationsTm(String regNo, String studentId, String courseId, String courseName, LocalDate regDate) {
         this.regNo = regNo;
-        this.sId = sId;
-        this.cId = cId;
-        this.cName = cName;
+        this.studentId = studentId;
+        this.courseId = courseId;
+        this.courseName = courseName;
         this.regDate = regDate;
     }
 
@@ -28,28 +28,28 @@ public class RegistrationsTm {
         this.regNo = regNo;
     }
 
-    public String getsId() {
-        return sId;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setsId(String sId) {
-        this.sId = sId;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
-    public String getcId() {
-        return cId;
+    public String getCourseId() {
+        return courseId;
     }
 
-    public void setcId(String cId) {
-        this.cId = cId;
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
     }
 
-    public String getcName() {
-        return cName;
+    public String getCourseName() {
+        return courseName;
     }
 
-    public void setcName(String cName) {
-        this.cName = cName;
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
     public LocalDate getRegDate() {
@@ -64,9 +64,9 @@ public class RegistrationsTm {
     public String toString() {
         return "RegistrationsTm{" +
                 "regNo='" + regNo + '\'' +
-                ", sId='" + sId + '\'' +
-                ", cId='" + cId + '\'' +
-                ", cName='" + cName + '\'' +
+                ", studentId='" + studentId + '\'' +
+                ", courseId='" + courseId + '\'' +
+                ", courseName='" + courseName + '\'' +
                 ", regDate=" + regDate +
                 '}';
     }

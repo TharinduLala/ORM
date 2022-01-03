@@ -1,14 +1,17 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class DashBoardController {
+public class DashBoardController implements Initializable {
     public AnchorPane dashBoardAP;
     public AnchorPane windowsLoadAp;
     public JFXButton btnDashBord;
@@ -17,7 +20,8 @@ public class DashBoardController {
     public JFXButton btnRegistrations;
     public JFXButton btnCourses;
 
-    public void initialize() {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         try {
             loadUi("DashBoardView");
         } catch (IOException e) {
@@ -31,7 +35,8 @@ public class DashBoardController {
         windowsLoadAp.getChildren().add(load);
     }
 
-    public void openDashBoard(MouseEvent mouseEvent) {
+    @FXML
+    public void openDashBoard() {
         try {
             loadUi("DashBoardView");
         } catch (IOException e) {
@@ -39,7 +44,8 @@ public class DashBoardController {
         }
     }
 
-    public void openRegisterStudent(MouseEvent mouseEvent) {
+    @FXML
+    public void openRegisterStudent() {
         try {
             loadUi("AddStudentForm");
         } catch (IOException e) {
@@ -47,7 +53,8 @@ public class DashBoardController {
         }
     }
 
-    public void openStudentsPage(MouseEvent mouseEvent) {
+    @FXML
+    public void openStudentsPage() {
         try {
             loadUi("StudentsForm");
         } catch (IOException e) {
@@ -55,7 +62,8 @@ public class DashBoardController {
         }
     }
 
-    public void openRegistrations(MouseEvent mouseEvent) {
+    @FXML
+    public void openRegistrations() {
         try {
             loadUi("RegistrationsForm");
         } catch (IOException e) {
@@ -63,7 +71,8 @@ public class DashBoardController {
         }
     }
 
-    public void openCoursesPage(MouseEvent mouseEvent) {
+    @FXML
+    public void openCoursesPage() {
         try {
             loadUi("CoursesForm");
         } catch (IOException e) {

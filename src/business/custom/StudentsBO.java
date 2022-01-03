@@ -15,4 +15,6 @@ public interface StudentsBO extends SuperBO {
     boolean updateStudent(StudentDto studentDto) throws Exception;
 
     String getCount() throws Exception;
+
+    boolean ifStudentExists(String studentId) throws Exception;
 }

@@ -10,6 +10,7 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -19,9 +20,11 @@ import view.Tm.CourseTm;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class CoursesFormController {
+public class CoursesFormController implements Initializable {
     public AnchorPane courseFormAP;
     public TableView<CourseTm> tblCourses;
     public TableColumn colCourseName;
@@ -42,7 +45,8 @@ public class CoursesFormController {
     CoursesBO coursesBO = (CoursesBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.COURSE);
     ObservableList<CourseTm> courseTmObservableList = FXCollections.observableArrayList();
 
-    public void initialize() {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         updateTable();
         searchInTable();
         txtCourseID.setDisable(true);
@@ -63,7 +67,7 @@ public class CoursesFormController {
     }
 
     @FXML
-    public void btnSaveAction(){
+    public void btnSaveAction() {
         try {
             if (coursesBO.getCourse(txtCourseID.getText()) == null) {
                 CourseDto courseDto = new CourseDto();

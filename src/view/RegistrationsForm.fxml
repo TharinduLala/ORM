@@ -16,11 +16,11 @@
         </Label>
         <TableView fx:id="tblRegDetails" layoutX="53.0" layoutY="222.0" prefHeight="479.0" prefWidth="1000.0">
             <columns>
-                <TableColumn fx:id="colRegNo" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Reg.No" />
-            <TableColumn fx:id="colStudentId" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Student Id" />
-                <TableColumn fx:id="colCourseId" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Course Id" />
-                <TableColumn fx:id="colCourseName" editable="false" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" resizable="false" text="Course Name" />
-                <TableColumn fx:id="colRegDate" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Reg. Date" />
+                <TableColumn editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Reg.No" />
+            <TableColumn editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Student Id" />
+                <TableColumn editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Course Id" />
+                <TableColumn editable="false" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" resizable="false" text="Course Name" />
+                <TableColumn editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Reg. Date" />
             </columns>
         </TableView>
         <TextField fx:id="txtSearch" layoutX="53.0" layoutY="165.0" prefHeight="35.0" prefWidth="400.0" AnchorPane.leftAnchor="53.0" />

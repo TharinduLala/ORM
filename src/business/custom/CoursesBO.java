@@ -2,8 +2,6 @@ package business.custom;
 
 import business.SuperBO;
 import dto.CourseDto;
-import dto.RegistrationDto;
-import dto.StudentDto;
 
 import java.util.ArrayList;
 
@@ -20,5 +18,5 @@ public interface CoursesBO extends SuperBO {
 
     String getCount() throws Exception;
 
-
+    CourseDto getCourseByName(String courseName) throws Exception;
 }

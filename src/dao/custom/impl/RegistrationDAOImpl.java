@@ -2,6 +2,7 @@ package dao.custom.impl;
 
 import dao.custom.RegistrationDAO;
 import entity.Registration;
+import entity.Student;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -64,12 +65,12 @@ public class RegistrationDAOImpl implements RegistrationDAO {
     }
 
     @Override
-    public List<Registration> getRecordsByStudent(String studentId) throws Exception {
+    public List<Registration> getRecordsByStudent(Student student) throws Exception {
         Session session = FactoryConfiguration.getFactoryConfiguration().getSession();
         Transaction transaction = session.beginTransaction();
         List<Registration>list=null;
         Query registrations = session.createQuery("from Registration where student=:s");
-        registrations.setParameter("s",studentId);
+        registrations.setParameter("s",student);
         list=registrations.list();
         transaction.commit();
         session.close();

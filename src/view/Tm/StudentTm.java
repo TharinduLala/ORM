@@ -1,6 +1,6 @@
 package view.Tm;
 
-import java.awt.*;
+import javafx.scene.control.Button;
 
 public class StudentTm {
     private String id;

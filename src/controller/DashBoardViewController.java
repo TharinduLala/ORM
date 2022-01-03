@@ -9,16 +9,19 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.ResourceBundle;
 
-public class DashBoardViewController {
+public class DashBoardViewController implements Initializable {
     public AnchorPane dashBoardViewAp;
     public Label lblDate;
     public Label lblTime;
@@ -31,7 +34,8 @@ public class DashBoardViewController {
     CoursesBO coursesBO = (CoursesBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.COURSE);
     StudentsBO studentsBO = (StudentsBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.STUDENT);
 
-    public void initialize() {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         setDateAndTime();
         try {
             lblCoursesCount.setText(coursesBO.getCount());
